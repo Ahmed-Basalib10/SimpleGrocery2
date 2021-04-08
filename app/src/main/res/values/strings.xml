@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimpleGrocery</string>
+    <string name="ahmed_basalib">AHMED BASALIB</string>
+    <string name="developed_by">"Developed by: "</string>
+</resources>

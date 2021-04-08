@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "672090871893",
+    "firebase_url": "https://simplegrocery-fc234.firebaseio.com",
+    "project_id": "simplegrocery-fc234",
+    "storage_bucket": "simplegrocery-fc234.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672090871893:android:4ca9347e01e8cd91b99cdc",
+        "android_client_info": {
+          "package_name": "com.e.simplegrocery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672090871893-139kn2n4sbmgkdlauv63ls7satt7po68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWYjq8EY1HOp1ygX8frnwMg5xk4XMvgPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672090871893-139kn2n4sbmgkdlauv63ls7satt7po68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
