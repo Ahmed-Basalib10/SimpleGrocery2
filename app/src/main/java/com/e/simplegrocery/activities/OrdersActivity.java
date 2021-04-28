@@ -113,7 +113,7 @@ public class OrdersActivity extends AppCompatActivity {
     }
 
     private void setupWidgets() {
-        LinearLayoutManager llmPlace = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager llmPlace = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true);
         ordersBinding.recyclerview.setLayoutManager(llmPlace);
     }
 

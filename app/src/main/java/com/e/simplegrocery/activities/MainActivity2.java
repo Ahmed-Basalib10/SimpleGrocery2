@@ -99,8 +99,7 @@ public class MainActivity2 extends AppCompatActivity {
         adapter=new FirebaseRecyclerAdapter<Category, CategoryAdapter>(options) {
             @Override
             protected void onBindViewHolder(@NonNull CategoryAdapter holder, int position, @NonNull Category model) {
-             //   String name = model.getName();
-             //   String Name = name.substring(0,1).toUpperCase()+name.substring(1).toLowerCase();
+
                 holder.cName.setText(Utility.capitalize(model.getName()));
                 Glide.with(MainActivity2.this).load(model.getImageurl()).into(holder.imageView);
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -114,32 +113,6 @@ public class MainActivity2 extends AppCompatActivity {
                     }
                 });
 
-                holder.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
-                    @Override
-                    public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-                        contextMenu.setHeaderTitle("Select Action");
-                        MenuItem menuItem =contextMenu.add(Menu.NONE,1,1,"Delete");
-                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                            @Override
-                            public boolean onMenuItemClick(MenuItem menuItem) {
-                                String catId = getRef(holder.getAdapterPosition()).getKey();
-                                assert catId != null;
-                                databaseReference.child(catId).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        Toast.makeText(getApplicationContext(),"Removed successfully",Toast.LENGTH_SHORT).show();
-                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                                return false;
-                            }
-                        });
-                    }
-                });
 
             }
 

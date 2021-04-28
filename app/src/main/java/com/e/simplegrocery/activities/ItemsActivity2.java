@@ -74,7 +74,7 @@ public class ItemsActivity2 extends AppCompatActivity {
                 if(editable.toString().isEmpty()){
                     loadAllitems("");
                 }else{
-                    loadAllitems(editable.toString());
+                    loadAllitems(editable.toString().toLowerCase());
                 }
 
             }
